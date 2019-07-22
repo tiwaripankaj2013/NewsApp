@@ -1,18 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
+import { Router } from '@angular/router';
+import{HttpClientModule} from '@angular/common/http';
+import { AppRoutingModule,routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { from } from 'rxjs';
+import {newsApiService } from './services/newsApi.service';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    routingComponents
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    HttpClientModule,
+    AppRoutingModule,
+    
   ],
-  providers: [],
+  providers: [newsApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

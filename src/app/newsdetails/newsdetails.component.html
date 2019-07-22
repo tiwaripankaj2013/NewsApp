@@ -1,0 +1,26 @@
+<div class="container">
+ <div class="row">
+  <div class="col-12">
+    <div class="heading-top">news detail working</div>
+  </div>
+ </div>
+ <div class="row article-main">
+   <div class="col-12">
+     <a class="article-details" href="{{article.url}}" target="_blank">
+       <h1>{{ article.title }}</h1>   
+      <div class="img-box"> <img src="{{ article.urlToImage }}" class="img-fluid"></div>
+         <div class="text-box">
+           <p class="author"><small>{{article.author}}</small></p>
+
+            <p>{{ article.content }}</p>
+            <!-- <p><small>{{article.publishedAt}}</small></p> -->
+            <!-- <iframe src="{{article.url}}" frameborder="0"></iframe> -->
+          </div>
+        </a>
+   </div>
+  
+  </div>
+</div>
+
+
+ 
